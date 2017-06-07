@@ -26,8 +26,8 @@ int main(){
         int maxf = 0; //ano de eleição do ultimo papa
         int max = 0; //qtd máxima de papas eleitos
 
-        for (vector<int>::iterator inicio = anos.begin(); inicio != anos.end(); inicio++){
-            vector<int>::iterator termino = upper_bound(anos.begin(), anos.end(), *inicio + periodo -1);
+        for (auto inicio = anos.begin(); inicio != anos.end(); inicio++){
+            auto termino = upper_bound(anos.begin(), anos.end(), *inicio + periodo -1);
             if (termino - inicio > max){
                 max = termino - inicio;
                 maxi = *inicio;
@@ -36,5 +36,5 @@ int main(){
         }
         cout << max << " " << maxi << " " << maxf << endl; 
     }
-    return 1;
+    return 0;
 }
